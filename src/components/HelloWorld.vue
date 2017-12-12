@@ -16,7 +16,7 @@ export default {
       values:[
               {keyName:"本班日报",keyValye:301,keyCode:""},
               {keyName:"本日日报",keyValye:302,keyCode:""},
-              {keyName:"会员卡",keyValye:306,keyCode:""}
+              {keyName:"会员卡",keyValye:306,keyCode:""},
              ],
      
     }
