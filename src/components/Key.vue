@@ -15,7 +15,8 @@ export default {
     keyName:[String],
     keyValye:[Number],
     Index:[Number],
-    Codes:[Array]
+    Codes:[Array],
+    NeedDel:false
   },
   data () {
     return {
