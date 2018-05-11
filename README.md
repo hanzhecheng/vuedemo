@@ -1,13 +1,11 @@
-# 一个简单的Vue Spa项目
+# 一个简单的Vue 后台管理项目
 
 ## 主要技术 Vue+Vuex+Vue-Router+Element-UI 
 
-# install dependencies
+##### 安装依赖
 npm install
-
-# serve with hot reload at localhost:8080
+##### 运行项目
 npm run dev
-
-# build for production with minification
+##### 打包项目
 npm run build
 
