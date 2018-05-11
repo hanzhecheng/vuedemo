@@ -29,136 +29,89 @@ const basicRouters = [
 ];
 //除基础路由外的所有路由，前端根据用户权限动态加载到路由中
 export const otherRouter = [
-  // {
-  //   path: '/g',
-  //   name: "系统管理",
-  //   component: layout,
-  //   redirect: "noredirect",
-  //   children: [
-  //     {
-  //       path: '23',
-  //       name: '基础商户',
-  //       component: Commodity_Info,
-  //     },
-  //     {
-  //       path: '24',
-  //       component: Commodity_Info,
-  //       name: '用户管理',
-  //     },
-  //   ]
-  // },
   {
-    path: '/BusinessCircle',
-    name: "智慧商圈",
+    path: '/a',
+    name: "1",
     component: layout,
     redirect: "noredirect",
     children: [
       {
         path: '1',
-        name: '商圈分析',
+        name: '1.1',
         component: Commodity_Info,
       },
       {
         path: '2',
         component: Commodity_Info,
-        name: '商圈业种/品牌 关联度分析',
+        name: '1.2',
       },
       {
         path: '3',
-        name: '商圈热力图',
+        name: '1.3',
       },
     ]
   },
   {
-    path: '/PassengerFlow ',
-    name: '智慧客流',
+    path: '/b ',
+    name: '2',
     redirect: "noredirect",
     component: layout,
     children: [
       {
-        path: 'ArrivalAnalysis', component: User, name: '到店分析'
+        path: '1', component: User, name: '2.1'
       },
       {
-        path: 'ArrivalStructAnalysis', component: User, name: '到店结构分析'
+        path: '2', component: User, name: '2.2'
       },
 
     ]
 
   },
   {
-    path: '/Operating',
-    name: '智慧运营',
+    path: '/c',
+    name: '3',
     redirect: "noredirect",
     component: layout,
     children: [
       {
-        path: '6', component: User, name: '分时段 空间布局热力图'
+        path: '1', component: User, name: '3.1'
       },
       {
-        path: 'POICatogory', component: User, name: '到店POI类型分析'
+        path: '2', component: User, name: '3.2'
       },
       {
-        path: 'POIBrand', component: User, name: '到店POI品牌分析'
+        path: '3', component: User, name: '3.3'
       },
     ]
   },
   {
-    path: '/Marketing',
-    name: '智慧营销',
+    path: '/d',
+    name: '4',
     redirect: "noredirect",
     component: layout,
   },
   {
-    path: '/CompetitorAnalysis',
-    name: '竞争对手分析',
+    path: '/e',
+    name: '5',
     redirect: "noredirect",
     component: layout,
     children: [
       {
-        path: '9', component: User, name: '到店分析'
+        path: '1', component: User, name: '5.1'
       },
       {
-        path: '10', component: User, name: '到店结构分析'
+        path: '2', component: User, name: '5.2'
       },
       {
-        path: '11', component: User, name: '商圈分析'
+        path: '3', component: User, name: '5.3'
       },
       {
-        path: '12', component: User, name: '商圈POI类型分析'
+        path: '4', component: User, name: '5.4'
       },
       {
-        path: '13', component: User, name: '商圈POI 分析'
+        path: '5', component: User, name:'5.5'
       },
     ]
-  },
-  {
-    path: '/UserPortrait',
-    name: '客群画像',
-    redirect: "noredirect",
-    component: layout,
-    children: [
-      {
-        path: 'ConsumptionDirection', component: User, name: '消费去向分析'
-      },
-      {
-        path: '15', component: User, name: '消费关联分析'
-      },
-      {
-        path: '16', component: User, name: '结构/POI类型/POI分析'
-      },
-    ]
-  },
-  {
-    path: '/LaunchPlatform',
-    name: '投放管理平台',
-    redirect: "noredirect",
-    component: layout,
-  },
-  {
-    path: '/DataAsset',
-    name: '数据资产',
-    redirect: "noredirect",
-    component: layout,
   },
   {
     path: '*',
