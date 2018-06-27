@@ -240,7 +240,6 @@ export default {
     li {
       cursor: pointer;
       padding: 5px;
-      padding-left: 20px;
       &:hover {
         background: #f3f3f3;
       }

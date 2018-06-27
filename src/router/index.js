@@ -35,7 +35,7 @@ export const otherRouter = [
     name: "1",
     component: layout,
     redirect: "noredirect",
-    meta: { title: "一级菜单" },
+    meta: { title: "1.0一级菜单" },
     children: [
       {
         path: '1',
@@ -61,7 +61,7 @@ export const otherRouter = [
     name: '2',
     redirect: "noredirect",
     component: layout,
-    meta: { title: "一级菜单" },
+    meta: { title: "2.0一级菜单" },
     children: [
       {
         path: '1', component: User, name: '2.1',  meta: { title: "测试菜单2.1" },
@@ -78,7 +78,7 @@ export const otherRouter = [
     name: '3',
     redirect: "noredirect",
     component: layout,
-    meta: { title: "一级菜单" },
+    meta: { title: "3.0一级菜单" },
     children: [
       {
         path: '1', component: User,   meta: { title: "测试菜单3.1(名字长一些)" },name: '3.1'
@@ -96,14 +96,25 @@ export const otherRouter = [
     name: '4',
     redirect: "noredirect",
     component: layout,
-    meta: { title: "一级菜单" },
+    meta: { title: "4.0一级菜单" },
+    children: [
+      {
+        path: '1', component: User,   meta: { title: "测试菜单4.1(名字长一些)" },name: '3.1'
+      },
+      {
+        path: '2', component: User,   meta: { title: "测试菜单4.2" },name: '3.2'
+      },
+      {
+        path: '3', component: User,   meta: { title: "测试菜单4.3(名字长一些)" },name: '3.3'
+      },
+    ]
   },
   {
     path: '/e',
     name: '5',
     redirect: "noredirect",
     component: layout,
-    meta: { title: "一级菜单" },
+    meta: { title: "5.0一级菜单" },
     children: [
       {
         path: '1', component: User,   meta: { title: "测试菜单5.1" },name: '5.1'
