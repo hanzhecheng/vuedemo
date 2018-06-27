@@ -32,5 +32,8 @@ npm run build
     ```const Layout = () => import(/* webpackChunkName: "Layout" */'@/pages/' + 'Layout/Layout'); ```  
     其中`/* */`这部分可以不需要写,这里写出来主要是调试的时候,如果不写这个,js文件名称会变成数字,不方便查找,  
     dev环境下,可以不用懒加载,因为会影响速度,可以在production下走懒加载模式
+  
+  ### 2018-06-27 更新
+  * 修复一些bug,菜单增加tab页签,增加tab页签数量较多时滚动
     
 

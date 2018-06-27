@@ -10,20 +10,24 @@
       </el-row>
     </el-aside>
     <el-container>
-      <el-header>
+      <el-header style="height:40px;">
         <el-row class="headrow">
-          <el-col :span="10">
+          <!-- <el-col :span="10">
             <bread-crumb :matchRouter="matchRouter"></bread-crumb>
           </el-col>
           <el-col :span="6" :offset="8">
             <top-setting></top-setting>
+           
+          </el-col> -->
+          <el-col :span="24">
+            <MenuTag></MenuTag>
           </el-col>
         </el-row>
 
       </el-header>
-      <el-main>
+      <el-main class="main">
         <transition name="fade" mode="out-in">
-          <keep-alive>
+          <keep-alive :include="cacheView">
             <router-view></router-view>
           </keep-alive>
         </transition>
@@ -34,14 +38,10 @@
 </template>
 
 <script>
-const Menu = () => import(/* webpackChunkName: "Menu" */ '@/pages/Layout/Menu')
-const BreadCrumb = () =>
-  import(/* webpackChunkName: "BreadCrumb" */ '@/pages/Layout/BreadCrumb')
-const BasicTrans = () =>
-  import(/* webpackChunkName: "BasicTrans" */ '@/pages/Transition/BasicTrans')
-const TopSetting = () =>
-  import(/* webpackChunkName: "TopSetting" */ '@/pages/Layout/TopSetting')
-
+const Menu = () => import('@/pages/Layout/Menu')
+const BreadCrumb = () => import('@/pages/Layout/BreadCrumb')
+const TopSetting = () => import('@/pages/Layout/TopSetting')
+const MenuTag = () => import('@/pages/Layout/MenuTag')
 export default {
   name: 'Layout',
   methods: {
@@ -55,7 +55,8 @@ export default {
   components: {
     Menu,
     BreadCrumb,
-    TopSetting
+    TopSetting,
+    MenuTag
   },
   computed: {
     routers() {
@@ -73,6 +74,9 @@ export default {
         matched.unshift({ path: '/Home', name: '首页', single: true })
       }
       return matched
+    },
+    cacheView() {
+      return this.$store.getters.cacheView
     }
   }
 }
@@ -86,11 +90,9 @@ export default {
   height: 100vh;
 }
 .el-header {
-  height: 30px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
 }
 .el-submenu__title > span {
   font-size: 16px;
@@ -102,7 +104,7 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .fade-enter,
 .fade-leave-to {
@@ -111,5 +113,9 @@ export default {
 }
 .headrow {
   width: 100%;
+  height: 40px;
+}
+.main {
+  background-color: #e9ecf3;
 }
 </style>

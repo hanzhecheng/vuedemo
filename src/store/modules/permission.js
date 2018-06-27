@@ -28,7 +28,7 @@ const permission = {
     actions: {
         GetPermissionRouter({ commit }, roles) {
             return new Promise((resole, reject) => {
-                let returnRouter = filterRouter(roles, otherRouter)
+                let returnRouter = otherRouter;//filterRouter(roles, otherRouter)
                 //let returnRouter = roles.findIndex(item => item.FUNCTIONID == 'System') !== -1 ? otherRouter : filterRouter(roles, otherRouter);
 
                 let vue404 = otherRouter.find(item => item.name == '404');
